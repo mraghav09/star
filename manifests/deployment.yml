@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mraghavstar 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mraghavstar
+  template:
+    metadata:
+      labels:
+        app: mraghavstar 
+    spec:
+      containers:
+        - name: mraghavstar 
+          image: mycontainer09.azurecr.io/mraghavstar
+          ports:
+          - containerPort: 80
